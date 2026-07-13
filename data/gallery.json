@@ -1,0 +1,79 @@
+{
+  "albums": [
+    {
+      "id": "fit",
+      "title": {
+        "pt": "FIT 2024",
+        "en": "FIT 2024"
+      },
+      "description": {
+        "pt": "Momentos do festival, encontros, aulas e convivência musical.",
+        "en": "Festival moments, meetings, classes and musical community."
+      },
+      "path": "assets/gallery/eventos/fit",
+      "thumbPath": "assets/gallery/thumbs/albums",
+      "thumbPrefix": "fit",
+      "images": []
+    },
+    {
+      "id": "unicamp",
+      "title": {
+        "pt": "UNICAMP",
+        "en": "UNICAMP"
+      },
+      "description": {
+        "pt": "Registros de atividades acadêmicas, trocas e apresentações.",
+        "en": "Academic activities, exchanges and performance records."
+      },
+      "path": "assets/gallery/eventos/unicamp",
+      "thumbPath": "assets/gallery/thumbs/albums",
+      "thumbPrefix": "unicamp",
+      "images": []
+    },
+    {
+      "id": "gsu-masterclass",
+      "title": {
+        "pt": "GSU Masterclass",
+        "en": "GSU Masterclass"
+      },
+      "description": {
+        "pt": "Encontro acadêmico com foco em trompete, repertório e performance.",
+        "en": "Academic meeting focused on trumpet, repertoire and performance."
+      },
+      "path": "assets/gallery/masterclasses/gsu masterclass",
+      "thumbPath": "assets/gallery/thumbs/albums",
+      "thumbPrefix": "gsu-masterclass",
+      "images": []
+    },
+    {
+      "id": "bastidores-victor",
+      "title": {
+        "pt": "Bastidores",
+        "en": "Backstage"
+      },
+      "description": {
+        "pt": "Retratos, preparação, rotina e momentos fora do palco.",
+        "en": "Portraits, preparation, routine and off-stage moments."
+      },
+      "path": "assets/gallery/bastidores/victor pires",
+      "thumbPath": "assets/gallery/thumbs/albums",
+      "thumbPrefix": "bastidores-victor",
+      "images": []
+    },
+    {
+      "id": "familia",
+      "title": {
+        "pt": "Família",
+        "en": "Family"
+      },
+      "description": {
+        "pt": "Memórias pessoais que fazem parte da trajetória.",
+        "en": "Personal memories that are part of the journey."
+      },
+      "path": "assets/gallery/familia",
+      "thumbPath": "assets/gallery/thumbs/albums",
+      "thumbPrefix": "familia",
+      "images": []
+    }
+  ]
+}

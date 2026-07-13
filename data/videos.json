@@ -1,0 +1,61 @@
+{
+  "categories": [
+    {
+      "id": "Performance",
+      "label": {
+        "pt": "Performance",
+        "en": "Performance"
+      }
+    },
+    {
+      "id": "Excertos",
+      "label": {
+        "pt": "Excertos",
+        "en": "Excerpts"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "platform": "youtube",
+      "id": "hT5HPbKTD6c",
+      "category": "Excertos",
+      "title": {
+        "pt": "FIT 2024 - Quicksilver",
+        "en": "FIT 2024 - Quicksilver"
+      },
+      "description": {
+        "pt": "O trecho é Quicksilver de Peter Graham, executado por Philip Smith e Victor Pires. Conduzido por Ellie Neufeld com a Banda Sinfonica Municipal de Bauru.",
+        "en": "The piece is Quicksilver by Peter Graham, performed by Philip Smith and Victor Pires. Conducted by Ellie Neufeld with the Banda Sinfonica Municipal de Bauru."
+      },
+      "thumbnail": "assets/videos/thumbnails/video-01.webp"
+    },
+    {
+      "platform": "youtube",
+      "id": "aSD_yM4bgy0",
+      "category": "Performance",
+      "title": {
+        "pt": "Legend - George Enesco",
+        "en": "Legend - George Enesco"
+      },
+      "description": {
+        "pt": "O trecho é Legend de George Enesco, executado por Victor Pires.",
+        "en": "The piece is Legend by George Enesco, performed by Victor Pires."
+      }
+    },
+    {
+      "platform": "youtube",
+      "id": "E0tx9_kCJBw",
+      "category": "Excertos",
+      "title": {
+        "pt": "Quintet (3rd Mov.) Por Malcolm Arnold - Bulldog Brass Society",
+        "en": "Quintet (3rd Mov.) by Malcolm Arnold - Bulldog Brass Society"
+      },
+      "description": {
+        "pt": "O trecho é Quintet (3rd Mov.) de Malcolm Arnold, executado por Trompetes - Marco Cubillas & Victor Pires, Trompa - Anthony Parrish, Trombone - Danny Alford, Tuba Hunter Kane.",
+        "en": "The piece is Quintet (3rd Mov.) by Malcolm Arnold, performed by Trumpets - Marco Cubillas & Victor Pires, French Horn - Anthony Parrish, Trombone - Danny Alford, Tuba Hunter Kane."
+      },
+      "thumbnail": "assets/videos/thumbnails/E0tx9_kCJBw.jpg"
+    }
+  ]
+}
