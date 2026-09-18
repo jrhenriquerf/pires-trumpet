@@ -887,6 +887,7 @@ h3 {
 }
 .video-card {
   display: grid;
+  grid-template-rows: auto 1fr;
   background: #fff;
   border: 1px solid #ded7ca;
   overflow: hidden;
@@ -919,7 +920,11 @@ h3 {
   font-size: 22px;
   box-shadow: 0 18px 38px rgba(0,0,0,.28);
 }
-.video-card-copy { padding: 22px; }
+.video-card-copy {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  padding: 22px;
+}
 .video-card-meta {
   display: flex;
   justify-content: space-between;
@@ -931,10 +936,14 @@ h3 {
   text-transform: uppercase;
 }
 .video-card h3 { margin: 14px 0 8px; }
-.video-card p { color: #605b52; }
+.video-card p {
+  margin-bottom: 24px;
+  color: #605b52;
+}
 .video-card .button {
+  align-self: end;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 0;
   background: #111;
   color: #fff;
   border-color: #111;
