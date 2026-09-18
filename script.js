@@ -9,26 +9,57 @@ function updateHeader() {
 function initNavigation() {
   window.addEventListener("scroll", updateHeader, { passive: true });
   updateHeader();
+  if (!nav || !navToggle || !header) return;
 
-  navToggle?.addEventListener("click", () => {
-    const isOpen = nav?.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
+  const mobile = window.matchMedia("(max-width: 960px)");
+  const english = document.documentElement.lang.startsWith("en");
+  nav.id = "site-navigation";
+  navToggle.setAttribute("aria-controls", nav.id);
+
+  function setMenu(open, restoreFocus = false) {
+    nav.classList.toggle("is-open", open);
+    header.classList.toggle("nav-is-open", open);
+    navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", english
+      ? (open ? "Close menu" : "Open menu")
+      : (open ? "Fechar menu" : "Abrir menu"));
+    if (restoreFocus) navToggle.focus({ preventScroll: true });
+  }
+
+  navToggle.addEventListener("click", () => {
+    setMenu(navToggle.getAttribute("aria-expanded") !== "true");
   });
-
-  nav?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      navToggle?.setAttribute("aria-expanded", "false");
-    });
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
   });
-
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".site-nav a").forEach((link) => {
-    const href = link.getAttribute("href");
-    if (href === currentPage || (currentPage === "" && href === "index.html")) {
-      link.setAttribute("aria-current", "page");
+  // Close without intercepting the tapped link or blocking page scrolling.
+  document.addEventListener("click", (event) => {
+    if (!nav.contains(event.target) && !navToggle.contains(event.target)) setMenu(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("is-open")) {
+      event.preventDefault();
+      setMenu(false, true);
     }
   });
+  document.addEventListener("focusin", (event) => {
+    if (!nav.contains(event.target) && !navToggle.contains(event.target)) setMenu(false);
+  });
+  mobile.addEventListener("change", () => setMenu(false));
+
+  // The toggle follows the links in the markup: make keyboard entry explicit.
+  navToggle.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown" || (event.key === "Tab" && !event.shiftKey && nav.classList.contains("is-open"))) {
+      event.preventDefault();
+      setMenu(true);
+      nav.querySelector("a")?.focus();
+    }
+  });
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  nav.querySelectorAll("a").forEach((link) => {
+    if (link.getAttribute("href") === currentPage) link.setAttribute("aria-current", "page");
+  });
+  setMenu(false);
 }
 
 function initYear() {
