@@ -1350,3 +1350,59 @@ body.modal-open { overflow: hidden; }
   html { scroll-behavior: auto; }
   .nav-toggle span { transition: none; }
 }
+
+/* Brand presentation and shared site footer */
+.contact-inner > img {
+  justify-self: center;
+  width: min(360px, 100%);
+  height: 210px;
+  margin-inline: auto;
+  padding: 28px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(201, 164, 93, .25);
+  border-radius: 20px;
+  background: radial-gradient(circle at 50% 45%, rgba(201, 164, 93, .15), transparent 55%), rgba(255, 255, 255, .025);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .025), 0 24px 64px rgba(0, 0, 0, .22);
+}
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  padding-block: 24px;
+  background: #050505;
+}
+.site-footer__copyright { justify-self: start; }
+.site-footer__top { justify-self: end; }
+.site-footer__credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(201, 164, 93, .24);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, .66);
+  text-decoration: none;
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+.site-footer__credit span { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.site-footer__credit strong { color: var(--color-gold); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+.site-footer__credit:hover,
+.site-footer__credit:focus-visible { color: #fff; border-color: rgba(201, 164, 93, .64); background: rgba(201, 164, 93, .08); }
+.site-footer__credit:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 3px; }
+@media (max-width: 960px) {
+  .contact-inner > img { width: min(310px, 84vw); height: 170px; padding: 22px; }
+  .site-footer { grid-template-columns: 1fr auto; }
+  .site-footer__credit { grid-column: 1 / -1; grid-row: 1; justify-self: center; margin-bottom: 8px; }
+}
+@media (max-width: 620px) {
+  .contact-inner > img { justify-self: center; width: min(260px, 82vw); height: 142px; margin-inline: auto; padding: 18px; border-radius: 16px; }
+  .contact-inner > div { text-align: center; }
+  .contact-inner .eyebrow,
+  .contact-inner .hero-actions { justify-content: center; }
+  .site-footer { grid-template-columns: 1fr; justify-items: center; padding: 24px 20px 18px; text-align: center; }
+  .site-footer__copyright,
+  .site-footer__top { justify-self: center; }
+  .site-footer__credit { grid-column: auto; grid-row: auto; order: -1; margin-bottom: 4px; }
+}
