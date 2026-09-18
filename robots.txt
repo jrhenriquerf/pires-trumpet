@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pirestrumpet.com.br/sitemap.xml
+Sitemap: https://jrhenriquerf.github.io/pires-trumpet/sitemap.xml
